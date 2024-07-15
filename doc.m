@@ -4,7 +4,7 @@
 % and the plane (I,n). Also provides the coordinates of H,
 % the projection of M on (I,n), and also works for a list of points.
 %
-% Author nicolas.douillet (at) free.fr, 2019-2024.
+% Author nicolas.douillet9 (at) gmail.com, 2019-2024.
 %                                                                       
 %% Syntax
 %
