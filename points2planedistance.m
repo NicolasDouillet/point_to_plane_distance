@@ -60,8 +60,8 @@ function [d2H, H] = points2planedistance(M, n, I)
 
 
 %% Inputs parsing
-assert(size(n,1) < 2 && size(I,1) < 2,'Input argument n and I must be a row vector of size [1,3]. One plane at a time. See point2planes_distances for distance from one point to multiple planes.');
-assert(size(M,2) == 3 && size(n,2) == 3 && size(I,2) == 3,'All input arguments must have the same number of columns (3).');
+assert(size(n,1) == 1 && size(I,1) == 1,'Input argument n and I must be row vectors of size [1,3]. One plane at a time. See point2planes_distances for distance from one point to multiple planes.');
+assert(isequal(size(M,2),size(n,2),size(I,2),3),'All input arguments must have the same number of columns (3).');
 assert(isreal(M) && isreal(n) && isreal(I),'All input arguments must be real.');
 
 
