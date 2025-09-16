@@ -1,5 +1,5 @@
 function [d2H, H] = point2planesdistance(M, n, I)
-% point2planesdistance : function to compute the distance between the
+%% point2planesdistance : function to compute the distance between the
 % 3D point M and the plane (I,n). Also provides the coordinates of H,
 % the projection of M on (I,n), and also works for a multiple planes.
 %
@@ -80,13 +80,13 @@ function [d2H, H] = point2planesdistance(M, n, I)
 % [d2H, H] = point2planesdistance(M, n ,I) % expected results : d2H = (sqrt(3)/3)*ones(6,1); H = I;
 
 
-% Inputs parsing
+%% Inputs parsing
 assert(size(M,1) < 2,'Input argument M must be a row vector of size [1,3]. One point at a time. See points2planedistance for distance from multiple points to a plane.');
 assert(size(M,2) == 3 && size(n,2) == 3 && size(I,2) == 3,'All input arguments must have the same number of columns (3).');
 assert(isreal(M) && isreal(n) && isreal(I),'All input arguments must be real.');
 
 
-% Body
+%% Body
 d_I = -(n(:,1).*I(:,1) + n(:,2).*I(:,2) + n(:,3).*I(:,3));
 t_H = -(d_I + n(:,1).*M(1,1) + n(:,2).*M(1,2) + n(:,3).*M(1,3)) ./ sum(n.^2,2);
 
